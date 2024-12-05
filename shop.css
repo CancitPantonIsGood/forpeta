@@ -1,0 +1,253 @@
+* {
+    cursor: url(cursors.png), auto;
+}
+ html {
+  background: black;
+  transition: background-color 1s ease;
+ }
+html, body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+/* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .navbar .logo {
+    position: inherit;
+    margin-left: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.2s;
+  }
+  .navbar .logo:hover {
+    text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c, 0 0 30px #ff004c;
+  }
+  .navbar .logo img {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 70px;
+    background: transparent;
+  }
+  .navbar .menu {
+    display: flex;
+    gap: 100px;
+  }
+
+  .navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .navbar .menu a:hover {
+    color: white;
+    text-decoration: overline #ff004c;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c, 0 0 30px #ff004c;;
+  }
+
+  /* shop Section */
+  .shopButton {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url('https://cdn.wallpapersafari.com/62/20/f2KKKX.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gill Sans";
+  }
+  .shopButton .shopbutton-text {
+    text-align: center; 
+    color: white;
+  }
+  .shopButton .shopbutton-text h1 {
+    font-size: 100px;
+    text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c;
+  }
+  .shopButton .shopbutton-text p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-shadow: 0 0 15px white;
+  }
+
+  .shopButton .shopbutton-text h1 p {
+    font-size: 145px;
+    margin: 10px 0;
+    color: #ff004c;
+  }
+  
+  .shopButton .shopbutton-text a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 50px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    text-shadow: 0 0 1px #b10035;
+    border: 3px solid #ff004c;
+    font-size: 25px;
+    transition: all 0.2s ease;
+  }
+  .shopButton .shopbutton-text a:hover {
+    background: #333;
+    text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c, 0 0 30px #ff004c;
+    border: 3px solid #ff004c;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c, 0 0 30px #ff004c;
+  }
+
+  /* News and Events Section */
+  .section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .section .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 300px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  .card:hover {
+    box-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c, 0 0 30px #ff004c;
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card .content {
+    padding: 15px;
+  }
+  .card .content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .card .content p {
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+  .card .content a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .card .content a:hover {
+    color: #e6b800;
+  }
+
+  /* Footer */
+  .footer {
+    background: #000000;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    display: none; /* Initially hidden */
+  }
+
+  
+  @media (max-width: 768px) {
+    .menus {
+      width: 100%;
+      position: relative;
+    }
+    .equipment {
+      left: 0;
+      padding: 20px;
+    }
+    .cards {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+#credits-tooltip {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center; 
+  z-index: 1000;
+  display: none;
+  width: 250px;
+  border: 2px solid, white;
+  width: 200px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.menu a:hover + #credits-tooltip {
+  display: block;
+}
+
+.tooltip {
+  position: absolute;
+  top: 40px; /* Adjust the vertical position relative to the link */
+  left: 50%; /* Center horizontally relative to the link */
+  transform: translateX(-50%); /* Center alignment */
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+  z-index: 1000;
+  display: none;
+  width: 300px;
+  border: 2px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  white-space: normal; /* Ensures the text wraps inside the box */
+}
+
+.menu a:hover + .tooltip {
+  display: block;
+}
+
+.menu .profile-tooltip {
+  width: auto; /* Allow width to adjust dynamically */
+  max-width: 250px; /* Prevent it from getting too wide */
+}

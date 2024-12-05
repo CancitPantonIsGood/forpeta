@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopXpress</title>
+    <link rel="stylesheet" href="shop1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="shop1.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="transLogo.png">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">ShopXpress<img src="logos.png" alt="Logo"></div>
+  </div>
+
+  <div class="menus">
+    <div class="container">
+      <a href="#" class="dropdown-toggle">Filter</a>
+      <div class="dropdown-content">
+        <div class="filter-category">
+          <h3>Equipment</h3>
+          <a href="#">Mouse</a>
+          <a href="#">Keyboard</a>
+          <a href="#">Headset</a>
+        </div>
+        <div class="filter-category">
+          <h3>Merchandise</h3>
+          <a href="#">T-Shirt</a>
+          <a href="#">Pants</a>
+          <a href="#">Jacket</a>
+        </div>
+        <div class="filter-category">
+          <h3>Accessories</h3>
+          <a href="#">Key Chains</a>
+          <a href="#">Skins</a>
+          <a href="#">Slippers</a>
+        </div>
+        <div class="filter-category">
+          <h3>Popular</h3>
+          <a href="#">Top Equipment</a>
+          <a href="#">Top Merchandise</a>
+          <a href="#">Top Accessories</a>
+        </div>
+        <div class="filter-category">
+          <h3>Sales</h3>
+          <a href="#">Discounted Mice</a>
+          <a href="#">Discounted Keyboards</a>
+          <a href="#">Discounted Headsets</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  <!-- Cards Section -->
+  <div class="equipment" id="Equipment">
+    <div class="cards">
+      <div class="card" data-name="Gaming Mouse" data-price="29.99">
+        <img src="https://assets.benable.com/rec_object_photos/22267095/full_size/7aa524b35a29a9c90e6f.jpeg" alt="Mouse">
+        <div class="content">
+          <h3>Gaming Mouse</h3>
+          <p>Check out for the greatest specs!</p>
+          <button class="buy-now">Explore Now</button>
+        </div>
+      </div>
+      <div class="card" data-name="Gaming Headset" data-price="59.99">
+        <img src="https://img.freepik.com/premium-photo/esports-merchandise-store-room-boys-with-shelves-gaming-m-illustration-trending-background-decor_1020495-180350.jpg" alt="Headset">
+        <div class="content">
+          <h3>Gaming Headset</h3>
+          <p>Get ready for the ultimate sound!</p>
+          <button class="buy-now">Explore Now</button>
+        </div>
+      </div>
+      <div class="card" data-name="Gaming T-Shirt" data-price="19.99">
+        <img src="t1fiker.jpg" alt="T-Shirt">
+        <div class="content">
+          <h3>Gaming T-Shirt</h3>
+          <p>Wear the ultimate gamer swag!</p>
+          <button class="buy-now">Explore Now!</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <!-- Checkout Section -->
+  <div class="checkout-container">
+    <div class="checkout-card">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="total">
+        <p>Total: <span id="total-price">$0.00</span></p>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <div id="custom-alert" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <p id="alert-message">Your purchase is being processed...</p>
+      <button id="confirm-btn">OK</button>
+    </div>
+  </div>
+
+</body>
+</html>
